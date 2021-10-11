@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/main2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/main2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container" id="sparse">
+      <div class="horizontal">
+        <p class="head-bold">Tasks <span class="head-thin">List</span></p>
+        <p class='button' onclick="toggle()"><i class="fa fa-plus-circle"></i> <span class='addItem'>Add Item</span>
+        </p>
+      </div>
+      <div class="horizontal-list"></div>
+      <div id='noTodo'>List is empty right now</div>
+      </div>
+      <div class="container" id="sparse-2">
+        <div class="horizontal">
+            <p class='back' onclick="goBack()"><i class="fa fa-chevron-circle-left"></i> Back</p>
+            <p class="head-bold" id='currenthead'>Trip to Paris</p>
+            <p class='button' onclick="toggle()"><i class="fa fa-plus-circle"></i></p>
+        </div>
+      <div class="horizontal-center">
+        <div class="card-2">
+          <p class="card-head" id='currenthead-1'>Trip To Paris</p>
+          <ul id='singleList' style="list-style-type:none;"></ul>
+          <div class='footer-2'>
+          <button class='button-completed' onclick="removeToDo(this)"><i class="fa fa-trash"aria-hidden="true"></i></button>
+          <p class='button-add' onclick="toggleAddItem(this)"><i class="fa fa-plus-circle"></i></p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="vertical popup" id="pop">
+      <div>
+        <p class="popup-text">Add New List</p>
+      </div>
+      <div>
+        <input type="text" id='listhead' placeholder="Add New List">
+      </div>
+      <div>
+       <button onclick="addTodo()">Add</button>
+       <button onclick="toggle()">Close</button>
+      </div>
+    </div>
+    <div class="vertical popup" id="popAddItem">
+      <div>
+        <p class="popup-text">Add New Item</p>
+      </div>
+      <div>
+        <input type="text" id='subListhead' placeholder="Add New Item">
+      </div>
+      <div>
+        <button onclick="addSubTodo()">Add</button>
+        <button onclick="toggleAddItem()">Close</button>
+      </div>
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+</html>
